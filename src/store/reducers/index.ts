@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
-import drugsInfo from "./drugsInfo";
+import drugsDataReducer from "./drugsData";
+import windowSizeReducer from "./windowSize";
 
-export default combineReducers({ drugsInfo });
+export default combineReducers({ drugsDataReducer, windowSizeReducer });

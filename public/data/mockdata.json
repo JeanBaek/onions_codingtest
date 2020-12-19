@@ -1,0 +1,73 @@
+{
+  "results": [
+    {
+      "id": 7449,
+      "drug": {
+        "id": 3938809,
+        "name": "락소펜엠정(록소프로펜나트륨수화물)",
+        "reimburse": "622801610",
+        "kd_code": 201309970,
+        "one_liner": "염증, 통증을 줄여주며 열을 내려줍니다.",
+        "unit": "정"
+      },
+      "created": "2019-09-02T15:54:30.323256+09:00",
+      "modified": "2019-09-02T15:54:30.323282+09:00",
+      "dose": 1,
+      "unit": "회",
+      "doses_num": 3,
+      "dosing_days_num": 5,
+      "per_days": 1,
+      "reimburse": "622801610",
+      "kd_code": 201309970,
+      "start_at": null,
+      "end_at": null,
+      "prescription": 241
+    },
+    {
+      "id": 117,
+      "drug": {
+        "id": 4003492,
+        "name": "페브릭정40밀리그램(페북소스타트)",
+        "reimburse": "644704010",
+        "kd_code": 201307583,
+        "one_liner": "통풍과 고요산혈증 치료제입니다.",
+        "unit": "정"
+      },
+      "created": "2019-04-23T15:20:39.668577+09:00",
+      "modified": "2019-06-21T10:04:50.381180+09:00",
+      "dose": 1,
+      "unit": "회",
+      "doses_num": 3,
+      "dosing_days_num": 5,
+      "per_days": 1,
+      "reimburse": "644704010",
+      "kd_code": 201307583,
+      "start_at": null,
+      "end_at": null,
+      "prescription": 241
+    },
+    {
+      "id": 118,
+      "drug": {
+        "id": 4003548,
+        "name": "콜킨정(콜키신)",
+        "reimburse": "644304080",
+        "kd_code": 198801219,
+        "one_liner": "통풍의 발작을 예방하고 치료합니다.",
+        "unit": "정"
+      },
+      "created": "2019-04-23T15:20:39.673458+09:00",
+      "modified": "2019-06-21T10:04:50.383448+09:00",
+      "dose": 1,
+      "unit": "회",
+      "doses_num": 3,
+      "dosing_days_num": 5,
+      "per_days": 1,
+      "reimburse": "644304080",
+      "kd_code": 198801219,
+      "start_at": null,
+      "end_at": null,
+      "prescription": 241
+    }
+  ]
+}
