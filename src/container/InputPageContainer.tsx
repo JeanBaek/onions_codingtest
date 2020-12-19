@@ -57,7 +57,6 @@ const InputPageContainer = () => {
 
     drugList.map((el: any) => {
       if (value === el.drug.name) {
-        console.log("el, id", el, idx);
         dispatch(setAddingDrug(el, idx));
       }
       if (value !== el.drug.name) {
