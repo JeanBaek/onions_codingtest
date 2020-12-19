@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, COLORS } from "./styles";
+import { InputPage } from "../src/container/InputPage";
 
 class Routes extends React.Component {
   render() {
@@ -11,7 +12,7 @@ class Routes extends React.Component {
           <GlobalStyle />
           <Router>
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" component={InputPage} />
             </Switch>
           </Router>
         </ThemeProvider>
