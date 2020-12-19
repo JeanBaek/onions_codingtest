@@ -7,6 +7,7 @@ import {
   setDosesNum,
   setDosingDaysNum,
   setPerDays,
+  setPrnBool,
   setListNull,
 } from "../store/actions";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
@@ -78,7 +79,7 @@ const InputPage: React.FC<IProps> = ({
             <InfoHeader>
               <InfoOrderNum>4</InfoOrderNum>약제
             </InfoHeader>
-            <InfoBody>
+            <InfoBody w={w} h={h}>
               <InfoBodyIn>
                 <NameWrapper>
                   <Name w={w} h={h}>
@@ -164,7 +165,7 @@ const InputPage: React.FC<IProps> = ({
                             h={h}
                             onChange={(e) => {
                               const { value } = e.target;
-                              dispatch(setDose(Number(value), id));
+                              dispatch(setDose(Number(value), id, idx));
                             }}
                           />
                           <Input
@@ -174,7 +175,7 @@ const InputPage: React.FC<IProps> = ({
                             h={h}
                             onChange={(e) => {
                               const { value } = e.target;
-                              dispatch(setDosesNum(Number(value), id));
+                              dispatch(setDosesNum(Number(value), id, idx));
                             }}
                           />
                           <Input
@@ -184,7 +185,9 @@ const InputPage: React.FC<IProps> = ({
                             h={h}
                             onChange={(e) => {
                               const { value } = e.target;
-                              dispatch(setDosingDaysNum(Number(value), id));
+                              dispatch(
+                                setDosingDaysNum(Number(value), id, idx)
+                              );
                             }}
                           />
                           <Input
@@ -194,10 +197,13 @@ const InputPage: React.FC<IProps> = ({
                             h={h}
                             onChange={(e) => {
                               const { value } = e.target;
-                              dispatch(setPerDays(Number(value), id));
+                              dispatch(setPerDays(Number(value), id, idx));
                             }}
                           />
-                          <Input type="button" />
+                          <Input
+                            type="checkbox"
+                            onClick={() => dispatch(setPrnBool(true, id, idx))}
+                          />
                         </DrugInfoCard>
                       );
                     }
@@ -258,13 +264,16 @@ const Header = styled.header`
 `;
 
 const GroupingComponents = styled.div<StateForStyle>`
-  ${({ w, h }) => w > h && `flex-flow: row wrap `}
+  flex-flow: ${({ w, h }) => w > h && "row wrap"};
   display: ${({ w, h }) => w > h && "flex"};
   margin-top: 9vh;
   width: ${({ w, h }) => w > h && "50vw"};
 `;
 
 const GroupRight = styled.div<StateForStyle>`
+  position: absolute;
+  top: 0;
+  right: 0;
   width: ${({ w, h }) => w > h && "50vw"};
 `;
 
