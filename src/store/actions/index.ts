@@ -1,4 +1,4 @@
-export const setBooks = (books: string) => ({
-  type: "SET_BOOKS",
-  payload: books,
+export const setDrugs = (drugs: string) => ({
+  type: "SET_DRUGS",
+  payload: drugs,
 });
