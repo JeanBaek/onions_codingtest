@@ -271,9 +271,9 @@ const GroupingComponents = styled.div<StateForStyle>`
 `;
 
 const GroupRight = styled.div<StateForStyle>`
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: ${({ w, h }) => w > h && "absolute"};
+  top: ${({ w, h }) => w > h && "0"};
+  right: ${({ w, h }) => w > h && "0"};
   width: ${({ w, h }) => w > h && "50vw"};
 `;
 

@@ -82,7 +82,7 @@ const drugsDataReducer = (state = INITIAL_STATE, action: any): any => {
         userDrugsInfo: state.userDrugsInfo?.map((oneInfo: any, idx: number) =>
           oneInfo.id === action.id && idx === action.idx && !oneInfo.prn
             ? { ...oneInfo, prn: action.payload }
-            : oneInfo.id === action.id && oneInfo.prn
+            : oneInfo.id === action.id && idx === action.idx && oneInfo.prn
             ? { ...oneInfo, prn: !action.payload }
             : oneInfo
         ),
