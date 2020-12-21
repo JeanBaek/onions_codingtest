@@ -39,8 +39,8 @@ const drugsDataReducer = (state = INITIAL_STATE, action: any): any => {
     case SETDRUGS.SET_DOSE:
       return {
         ...state,
-        userDrugsInfo: state.userDrugsInfo?.map((oneInfo: any) =>
-          oneInfo.id === action.id
+        userDrugsInfo: state.userDrugsInfo?.map((oneInfo: any, idx: number) =>
+          oneInfo.id === action.id && idx === action.idx
             ? { ...oneInfo, dose: action.payload }
             : oneInfo
         ),
@@ -49,8 +49,8 @@ const drugsDataReducer = (state = INITIAL_STATE, action: any): any => {
     case SETDRUGS.SET_DOSESNUM:
       return {
         ...state,
-        userDrugsInfo: state.userDrugsInfo?.map((oneInfo: any) =>
-          oneInfo.id === action.id
+        userDrugsInfo: state.userDrugsInfo?.map((oneInfo: any, idx: number) =>
+          oneInfo.id === action.id && idx === action.idx
             ? { ...oneInfo, doses_num: action.payload }
             : oneInfo
         ),
@@ -59,8 +59,8 @@ const drugsDataReducer = (state = INITIAL_STATE, action: any): any => {
     case SETDRUGS.SET_DOSINGDAYSNUM:
       return {
         ...state,
-        userDrugsInfo: state.userDrugsInfo?.map((oneInfo: any) =>
-          oneInfo.id === action.id
+        userDrugsInfo: state.userDrugsInfo?.map((oneInfo: any, idx: number) =>
+          oneInfo.id === action.id && idx === action.idx
             ? { ...oneInfo, dosing_days_num: action.payload }
             : oneInfo
         ),
@@ -69,9 +69,21 @@ const drugsDataReducer = (state = INITIAL_STATE, action: any): any => {
     case SETDRUGS.SET_PERDAYS:
       return {
         ...state,
-        userDrugsInfo: state.userDrugsInfo?.map((oneInfo: any) =>
-          oneInfo.id === action.id
+        userDrugsInfo: state.userDrugsInfo?.map((oneInfo: any, idx: number) =>
+          oneInfo.id === action.id && idx === action.idx
             ? { ...oneInfo, per_days: action.payload }
+            : oneInfo
+        ),
+      };
+
+    case SETDRUGS.SET_PRNBOOL:
+      return {
+        ...state,
+        userDrugsInfo: state.userDrugsInfo?.map((oneInfo: any, idx: number) =>
+          oneInfo.id === action.id && idx === action.idx && !oneInfo.prn
+            ? { ...oneInfo, prn: action.payload }
+            : oneInfo.id === action.id && oneInfo.prn
+            ? { ...oneInfo, prn: !action.payload }
             : oneInfo
         ),
       };

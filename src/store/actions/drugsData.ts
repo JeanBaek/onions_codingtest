@@ -22,28 +22,39 @@ export const setReimburse = (reimburse: string, id: number, idx: number) => ({
   idx,
 });
 
-export const setDose = (num: number, id: number) => ({
+export const setDose = (num: number, id: number, idx: number) => ({
   type: SETDRUGS.SET_DOSE,
   payload: num,
   id,
+  idx,
 });
 
-export const setDosesNum = (num: number, id: number) => ({
+export const setDosesNum = (num: number, id: number, idx: number) => ({
   type: SETDRUGS.SET_DOSESNUM,
   payload: num,
   id,
+  idx,
 });
 
-export const setDosingDaysNum = (num: number, id: number) => ({
+export const setDosingDaysNum = (num: number, id: number, idx: number) => ({
   type: SETDRUGS.SET_DOSINGDAYSNUM,
   payload: num,
   id,
+  idx,
 });
 
-export const setPerDays = (num: number, id: number) => ({
+export const setPerDays = (num: number, id: number, idx: number) => ({
   type: SETDRUGS.SET_PERDAYS,
   payload: num,
   id,
+  idx,
+});
+
+export const setPrnBool = (bool: boolean, id: number, idx: number) => ({
+  type: SETDRUGS.SET_PRNBOOL,
+  payload: bool,
+  id,
+  idx,
 });
 
 export const setInfoRow = (param: any) => ({
@@ -97,6 +108,7 @@ export const SETDRUGS = {
   SET_DOSESNUM: "SET_DOSESNUM",
   SET_DOSINGDAYSNUM: "SET_DOSINGDAYSNUM",
   SET_PERDAYS: "SET_PERDAYS",
+  SET_PRNBOOL: "SET_PRNBOOL",
   SET_INFOROW: "SET_INFOROW",
   SET_ADDINGDRUG: "SET_ADDINGDRUG",
   SET_LISTNULL: "SET_LISTNULL",
