@@ -14,11 +14,9 @@ export function useSelector<TState = any, TSelected = unknown>(
 ): TSelected;
 ```
 
-#### 0. `git clone`
 #### 1. `yarn install`
 #### 2. `yarn build`
 #### 3. `yarn start`
-
 
 
 
