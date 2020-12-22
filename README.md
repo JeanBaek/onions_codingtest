@@ -6,7 +6,7 @@
 * `yarn start` 후 `Property 'drugsDataReducer' does not exist on type 'DefaultRootState'` 문구가 확인된다면 아래의 방법으로 수정 후 확인 부탁드립니다.
 
     * InputPageContainer.tsx 파일에서 useSelector에 커서를 두고 command를 누른채 클릭한다. 이동되는 페이지에서 `TState = DefaultRootState` 를 `TState = any`로 수정한다.
-(해당 방법으로 수정한 코드)
+(아래는 해당 방법으로 수정한 코드)
 ```
 export function useSelector<TState = any, TSelected = unknown>(
     selector: (state: TState) => TSelected,
